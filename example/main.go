@@ -58,6 +58,7 @@ func GlobalUtils() {
 	fmt.Println(result.IsFalsy(false))
 	fmt.Println(result.IsTruthy("true"))
 	fmt.Println(result.ValueOr("", "default"))
+	fmt.Println(result.ValueOrElse("", func() string { fmt.Println("aduhhhh kosong\t"); return "" }))
 
 	fmt.Println()
 }

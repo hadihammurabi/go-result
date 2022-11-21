@@ -17,3 +17,11 @@ func ValueOr[T any](value T, defaultValue T) T {
 
 	return value
 }
+
+func ValueOrElse[T any](value T, fallback func() T) T {
+	if IsFalsy(value) {
+		return fallback()
+	}
+
+	return value
+}
