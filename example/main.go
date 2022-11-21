@@ -11,6 +11,8 @@ func main() {
 	BasicNone()
 	EqualsSome()
 	EqualsNone()
+
+	GlobalUtils()
 }
 
 func BasicSome() {
@@ -47,6 +49,15 @@ func EqualsNone() {
 	res1 := result.None[int]()
 	res2 := result.Some(1)
 	fmt.Println(res2.Equals(res1))
+
+	fmt.Println()
+}
+
+func GlobalUtils() {
+	fmt.Println("GlobalUtils")
+	fmt.Println(result.IsFalsy(false))
+	fmt.Println(result.IsTruthy("true"))
+	fmt.Println(result.ValueOr("", "default"))
 
 	fmt.Println()
 }
